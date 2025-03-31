@@ -36,7 +36,7 @@ public class Person implements Comparable<Person> {
     }
 
     /**
-     * Create a person with a place-holder name.
+     * Create a Person with a placeholder name, sex, age, height, and weight.
      */
     public Person() {
         this("Baby Human", "", 0, 0, 0);
@@ -48,7 +48,7 @@ public class Person implements Comparable<Person> {
      * @param newName this Person's new name.
      */
     public void setName(String newName) {
-        name = newName;
+        this.name = newName;
     }
 
     /**
@@ -57,7 +57,7 @@ public class Person implements Comparable<Person> {
      * @return this Person's name.
      */
     public String getName() {
-        return name;
+        return this.name;
     }
 
     /**
