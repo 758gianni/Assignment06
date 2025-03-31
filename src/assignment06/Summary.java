@@ -78,7 +78,8 @@ public class Summary {
                 String[] parts = line.split(",");
 
                 if (parts.length >= 5) {
-                    String name = parts[0].trim().substring(1, parts[0].length() - 1);
+                    String name = parts[0].trim().substring(1,
+                            parts[0].length() - 1);
                     String sex = parts[1].trim().replaceAll("^\"|\"$", "");
                     int age = Integer.parseInt(parts[2].trim());
                     int height = Integer.parseInt(parts[3].trim());
@@ -135,7 +136,8 @@ public class Summary {
 
                 for (Person person : people) {
                     if (person.getSex().equalsIgnoreCase("F")) {
-                        if (shortestFemale == null || person.getHeight() < shortestFemale.getHeight()) {
+                        if (shortestFemale == null || person.getHeight()
+                                < shortestFemale.getHeight()) {
                             shortestFemale = person;
                         }
                     }
@@ -143,11 +145,15 @@ public class Summary {
 
                 System.out.println("Summary:");
                 System.out.println("Total number of records: " + total);
-                System.out.println("Youngest person: " + youngest.getName() + " (" + youngest.getAge() + " years old)");
-                System.out.println("Oldest person: " + oldest.getName() + " (" + oldest.getAge() + " years old)");
+                System.out.println("Youngest person: " + youngest.getName()
+                        + " (" + youngest.getAge() + " years old)");
+                System.out.println("Oldest person: " + oldest.getName()
+                        + " (" + oldest.getAge() + " years old)");
                 System.out.format("Average age: %.2f\n", averageAge);
-                System.out.println("Tallest person: " + tallest.getName() + " (" + tallest.getHeight() + " inches)");
-                System.out.println("Shortest female: " + (shortestFemale != null ? shortestFemale.getName() : "N/A"));
+                System.out.println("Tallest person: " + tallest.getName()
+                        + " (" + tallest.getHeight() + " inches)");
+                System.out.println("Shortest female: " + (shortestFemale != null
+                        ? shortestFemale.getName() : "N/A"));
 
                 break;
 
@@ -169,7 +175,8 @@ public class Summary {
                     }
                 }
 
-                if (args.length > 3 && Boolean.parseBoolean(args[3].toLowerCase())) {
+                if (args.length > 3
+                        && Boolean.parseBoolean(args[3].toLowerCase())) {
                     Collections.reverse(people);
                 }
 
@@ -180,8 +187,9 @@ public class Summary {
                     int height = person.getHeight();
                     int weight = person.getWeight();
 
-                    String personLine = String.format("%-10s %-6s %6d %6d %6d%n", name, sex, age, height, weight);
-                    System.out.print(personLine);
+                    String line = String.format("%-10s %-6s %6d %6d %6d%n",
+                            name, sex, age, height, weight);
+                    System.out.print(line);
                 }
 
                 break;
