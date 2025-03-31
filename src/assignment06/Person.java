@@ -97,13 +97,6 @@ public class Person implements Comparable<Person> {
     }
 
     /**
-     * Provide a simple report on this Person.
-     */
-    public void writeOutput() {
-        System.out.println("Name: " + name);
-    }
-
-    /**
      * Check whether this Person has the same name as another.
      *
      * @param other the other Person (who possibly has the same name).
@@ -114,7 +107,7 @@ public class Person implements Comparable<Person> {
             return false;
         }
 
-        return name.equalsIgnoreCase(other.name);
+        return this.name.equalsIgnoreCase(other.name);
     }
 
     /**
@@ -124,7 +117,7 @@ public class Person implements Comparable<Person> {
      */
     @Override
     public String toString() {
-        return "Person: " + name;
+        return "Person: " + this.name;
     }
 
     @Override
