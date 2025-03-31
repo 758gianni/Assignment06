@@ -35,20 +35,10 @@ public class Person implements Comparable<Person> {
         this.weight = weight;
     }
 
-//    /**
-//     * Create a Person with the given name.
-//     *
-//     * @param initialName this Person's name
-//     */
-//    public Person(String initialName) {
-//        name = initialName;
-//    }
-//
     /**
      * Create a person with a place-holder name.
      */
     public Person() {
-//        this("Baby Human");
         this("Baby Human", "", 0, 0, 0);
     }
 
