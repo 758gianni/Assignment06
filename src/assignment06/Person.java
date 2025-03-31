@@ -120,11 +120,19 @@ public class Person implements Comparable<Person> {
         return "Person: " + this.name;
     }
 
+    /**
+     * Create a String representing this Person.
+     *
+     * @return a String with this Person's name.
+     */
     @Override
     public int compareTo(Person other) {
         return this.name.compareTo(other.name);
     }
 
+    /**
+     * Comparator for sorting Persons by name in alphabetical order.
+     */
     public static final Comparator<Person> BY_NAME = new Comparator<Person>() {
         @Override
         public int compare(Person p1, Person p2) {
@@ -132,6 +140,9 @@ public class Person implements Comparable<Person> {
         }
     };
 
+    /**
+     * Comparator for sorting Persons by age in alphabetical order.
+     */
     public static final Comparator<Person> BY_AGE = new Comparator<Person>() {
         @Override
         public int compare(Person p1, Person p2) {
@@ -139,6 +150,9 @@ public class Person implements Comparable<Person> {
         }
     };
 
+    /**
+     * Comparator for sorting Persons by height in alphabetical order.
+     */
     public static final Comparator<Person> BY_HEIGHT = new Comparator<Person>() {
         @Override
         public int compare(Person p1, Person p2) {
